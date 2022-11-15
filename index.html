@@ -5,21 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/x-icon" href="https://openlab.wezeo.dev/wp-content/uploads/2022/02/cropped-Favicon.png" />
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
   <title>Openlab.sk - Inštitút stredoškolského odborného vzdelávania zameraný na IT &amp; AI.</title>
   <style>
     * {
       font-family: 'SF Pro Display', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    *::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE and Edge */
+    * {
+      -ms-overflow-style: none;
+    }
+
+    body {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    section {
+      position: relative;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: calc(1.375rem + 1.5vw);
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    img {
+      vertical-align: middle;
     }
 
     nav {
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
     }
 
+    button {
+      background-color: #3597ff;
+      border-color: #3597ff;
+      border-radius: 6px;
+      font-size: 14px;
+      padding: 12px 20px;
+      white-space: nowrap;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.5;
+      vertical-align: middle;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    ul.main_nav {
+      margin: 1em 2em 1em 2em;
+      padding: 0;
+      list-style-type: none;
+      font-size: 14px;
+    }
+
     ul.main_nav > li  {
       margin-left: 2em;
+      width: 100%;
+      height: 2rem;
+    }
+
+    ul.main_nav a {
+      color: #1a232f!important;
+      text-decoration: none;
+    }
+
+    ul.main_nav a:hover {
+      color: #3597ff !important;;
     }
 
     ul.dropdown {
@@ -32,19 +97,239 @@
     }
 
     #mainVisual {
-      display: flex; 
       color: white; 
       background-color: #3597ff;
+      position: relative;
     }
+
+    #why h5 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    #why p {
+      padding: 0;
+    }
+
+    #why .card {
+      align-items: center;
+    }
+
+    #vision .item:nth-child(1) {
+      color: #5b94d7;
+      background-color: rgba(221, 236, 251, 0.4);
+    }
+
+    #vision .item:nth-child(2) {
+      color: #5cc19a;
+      background-color: rgba(156, 238, 204, 0.4);
+    }
+
+    #vision .item:nth-child(3) {
+      color: #dbca68;
+      background-color: rgba(238, 226, 156, 0.4);
+    }
+
+    #vision .item:nth-child(4) {
+      color: #b95e73;
+      background-color: rgba(238, 156, 156, 0.4);
+    }
+
+    #vision .item {
+      margin: 0.5rem!important;
+      padding: 1rem 1.5rem 1rem 1.5rem!important;
+      width: 36%;
+      border-radius: 4px;
+    }
+
+    #vision .item p {
+      margin: 0 0 0.25rem 0!important;
+    }
+
+    #vision .item .count {
+      font-size: 90px;
+    }
+
+    #vision .item .type {
+      font-size: 18px;
+    }
+
+    .shape {
+      display: none;
+      overflow: hidden!important;
+      position: absolute!important;
+      right: 0;
+      width: 241px;
+      bottom: -241px;
+    }
+
+    .shape img {
+      width: 482px;
+    } 
+
+    .py-4 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .pt-3 {
+      padding-top: 1rem!important;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem!important;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem!important;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: var(--bs-gutter-x,.75rem);
+      padding-left: var(--bs-gutter-x,.75rem);
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .flex_center {
+      display: flex;
+      align-items: center;
+    }
+
+    .b {
+      font-weight: 700 !important;
+    }
+
+    .tg {
+      color: #566b8d;
+    }
+
+    .f {
+      display: flex;
+    }
+
+    .fw {
+      flex-wrap: wrap;
+    }
+
+    .f1 {
+      flex: 1;
+    }
+
+    .frd, .frd2 {
+      flex-direction: column;
+    }
+
+    .jc {
+      justify-content: center;
+    }
+
+    .je {
+      justify-content: end;
+    }
+
+    .ac {
+      align-items: center;
+    }
+
+    .ae {
+      align-items: end;
+    }
+
+    .col {
+      flex-direction: column;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .d-none {
+      display: none;
+    }
+
+    @media (min-width: 576px) {
+      .container {
+        max-width: 540px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
+      }
+
+      .shape {
+        display: block;
+      }
+
+      .py-md-5 {
+      padding-top: 3rem!important;
+      padding-bottom: 3rem!important;
+      }
+
+      #why .card {
+        align-items: start;
+      }
+
+      .frd {
+        flex-direction: row;
+      }
+
+      ul.main_nav > li  {
+      width: auto;
+    }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        max-width: 960px;
+      }
+
+      .frd2 {
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      .shape {
+        width: 120px;
+        bottom: -120px;
+      }
+      
+      .shape img {
+        width:241px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .d-xl-block {
+        display: block!important;
+      }
+
+      .nav_container {
+        height: 80px;
+      }
+    }
+    
   </style>
 </head>
 <body>
   <nav>
-    <a href="https://openlab.sk">
-			<img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/openlab-logo.svg" alt="logo" width="120" height="28">
-      <ul class="main_nav" style="display: flex; flex-direction: row;">
-        <li><a href="/">Úvod</a></li>
-        <li class="dropdown">
+    <div class="nav_container f frd">
+      <div class="f ac jc" style="margin: 1rem">
+        <a href="https://openlab.sk">
+          <img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/openlab-logo.svg" alt="logo" width="120" height="28">
+        </a>
+      </div>
+      <ul class="main_nav f ac js  frd fw">
+        <li class="f row ac"><a href="/">Úvod</a></li>
+        <li class="dropdown f row ac">
           <a href="https://openlab.sk/openlaby">OpenLab</a>
           <ul class="dropdown">
             <li><a href="https://openlab.sk/hybridlab">HybridLab</a></li>
@@ -52,35 +337,88 @@
             <li><a href="https://openlab.sk/appslab">AppsLab</a></li>
           </ul>
         </li>
-        <li><a href="https://openlab.sk/pre-ucitelov">Pre učiteľov</a></li>
-        <li><a href="https://openlab.sk/partneri">Partneri</a></li>
-        <li><a href="https://openlab.sk/moderna-skola">Modrená škola</a></li>
-        <li><a href="https://openlab.sk/caste-otazky">Časté otázky</a></li>
+        <li class="f row ac"><a href="https://openlab.sk/pre-ucitelov">Pre učiteľov</a></li>
+        <li class="f row ac"><a href="https://openlab.sk/partneri">Partneri</a></li>
+        <li class="f row ac"><a href="https://openlab.sk/moderna-skola">Modrená škola</a></li>
+        <li class="f row ac"><a href="https://openlab.sk/caste-otazky">Časté otázky</a></li>
       </ul>
-		</a>
-  </nav>
-  <section id="mainVisual">
-    <div style="display: flex; justify-content: center; flex-direction: row;">
-      <div style="width: 30%; margin: 5em">
-        <h1 style="font-size: 2em; letter-spacing: 1px; font-weight: 300;">Inštitút stredoškolského odborného vzdelávania<br><span style="font-weight: bold;">zameraný na IT &amp AI</span></h1>
-      <p style="font-size: 1em">Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania</p>
-      </div>
-      <img style="max-width: 40%; max-height:95%; justify-content: right;" src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/main-home.png" alt="fešáci s notebookom">
+      <a class="d-none d-xl-block" style="margin: 1rem" href="https://openlab.sk/openlaby"><button class="btn btn-primary">Pridajte sa k nám</button></a>
     </div>
-  </section>
-  <section id="why"></section>
-  <section id="vision"></section>
-  <section id="labs"></section>
-  <section id="schools"></section>
-  <section id="testimonials"></section>
-  <section id="join"></section>
-  <section id="studentProjects"></section>
-  <section id="special"></section>
-  <section id="supportUS"></section>
-  <section id="whoBehind"></section>
-  <section id="modernScool"></section>
-  <section id="support"></section>
-  <section id="newsletter"></section>
+  </nav>
+  <main>
+    <section id="mainVisual" class="mb-4">
+      <div class="container f frd2 jc">
+        <div class="f col f1 jc">
+          <h1 style="font-size: 2em; font-weight: 300;">Inštitút stredoškolského odborného vzdelávania<br><span style="font-weight: bold;">zameraný na IT &amp AI</span></h1>
+          <p style="font-size: 1em">Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania</p>
+        </div>
+        <div class="f f1">
+          <img style="width: 100%; " src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/main-home.png" alt="fešáci s notebookom">
+        </div>
+      </div>
+      <div class="shape"><img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/o_letter.png" alt="shape"></div>
+    </section>
+    <section id="why" class="mb-4 py-4">
+      <div class="container col fw jc py-4">
+        <div class="f col ac">
+          <h2>Prečo <span class="b">OpenLab?</span></h2>
+          <p class="tg">V OpenLabe študentov učíme najnovšie technológie. Zároveň im dávame veľkú slobodu, pričom ich vedieme k zodpovednosti a samostatnosti, učíme ich princípy partnerského prístupu, pracovať v tíme, trénujeme ich schopnosti sebareflexie a podnecujeme ich kreativitu. Takto študentov pripravujeme osobnostne aj tech zručnosťami na veľké veci, ktoré môžu v budúcnosti tvoriť.</p>
+        </div>
+        <div class="f frd fw jc">
+          <div class="f col card f1">
+            <img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/select.svg" alt="pekny stack">
+            <div class="f col card pt-3">
+              <h5>Celospoločenský rozvoj</h5>
+              <p class="tg">Osnovy aj učebné materiály pre všetky tech oblasti sú open source.</p>
+            </div>
+          </div>
+          <div class="f col card f1 px-4">
+            <img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/support.svg" alt="zachranné koleso">
+            <div class="f col card pt-3">
+              <h5 class="mb-2">Učenie praxou</h5>
+              <p class="tg">Študentov vedieme k tímovému riešeniu problémov.</p>
+            </div>
+          </div>
+          <div class="f col card f1">
+            <img src="https://openlab.sk/wp-content/themes/wp-bootstrap-starter/assets/images/intership.svg" alt="kufrik">
+            <div class="f col card pt-3">
+              <h5>Rozvoj talentu</h5>
+              <p class="tg">Vytvárame šikovné tímy schopné riešiť veľké problémy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="vision" class="py-4">
+      <div class="container py-4">
+        <div class="f frd2 ac fw">
+          <div style="flex: 1;">
+            <h2>Naša vízia <span class="b">v OpenLabe</span></h2>
+            <p class="tg mb-4">Veríme, že otvorený prístup a kvalitné vzdelanie sú základom úspechu jednotlivca ako aj prosperujúcej spoločnosti.</p>
+            <p class="tg">Uvedomujeme si, že ak chceme niečo zmeniť, musíme ísť príkladom. Našim cieľom je rozšíriť princípy OpenLab-u na všetkých úrovniach škôl a nastaviť svetový štandard vzdelávania v školstve v technológiách.</p>
+          </div>
+          <div class="f row fw jc" style="flex: 1;">
+            <div class="item f col je ae">
+              <p class="count b">6</p>
+              <p class="type b">tried</p>
+            </div>
+            <div class="item f col je ae">
+              <p class="count b">267</p>
+              <p class="type b">študentov</p>
+            </div>
+            <div class="item f col je ae">
+              <p class="count b">13</p>
+              <p class="type b">LabMastrov</p>
+            </div>
+            <div class="item f col je ae">
+              <p class="count b">2</p>
+              <p class="type b">školy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
